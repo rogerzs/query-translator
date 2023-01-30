@@ -19,10 +19,11 @@ translation_parameters = make_translation()
 
 if st.button('Traduzir'):
 
-    translation_result = sg.transpile(translation_parameters[2],
-                                    write=translation_parameters[1].lower(),
-                                    read=translation_parameters[0].lower(),
-                                    pretty = True)
-
     st.subheader('Resultado da Tradução')
-    st.write(translation_result)
+
+    st.text(sg.transpile(translation_parameters[2],
+                        write=translation_parameters[1].lower(),
+                        read=translation_parameters[0].lower(),
+                        pretty = True
+                        )[0]
+    )
