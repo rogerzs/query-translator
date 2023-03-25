@@ -1,17 +1,20 @@
-FROM PYTHON 3.10.6
+FROM python:3.10.6
 
-EXPOSE 8080
+WORKDIR /query-translator
+
+EXPOSE 8085
 
 COPY requirements.txt requirements.txt
+
 
 RUN pip install -U pip
 
 RUN pip install -r requirements.txt
 
-COPY 🏠Home.py 🏠Home.py
+COPY Home.py Home.py
 
 COPY pages pages
 
 WORKDIR .
 
-RUN ENTRYPOINT["streamlit", "run", "🏠Home.py", "-server.port=8080", "-server.address=0.0.0.0"]
+CMD streamlit run Home.py
