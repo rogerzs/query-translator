@@ -1,5 +1,5 @@
 
-## Whats the purpose of Roseta
+## What's the purpose of Roseta?
 
 The purpose of roseta is make query translation between different sintaxes of databases.
 Sometimes Data Analysts, Analytics Engineers ou Data Engineers need run a query from a database in other type of database, but some functions in these database are not the same, so they will have a problem.
